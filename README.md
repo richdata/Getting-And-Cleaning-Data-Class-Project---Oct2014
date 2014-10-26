@@ -38,6 +38,6 @@ The [Data folder](data)  in this repository contains these 4 files:
   1. [all_dataset.csv](data/all_dataset.csv) - the combined dataset with both train and test data included in it.  It also contains the subject and activity columns added to it
   2. [features.txt](data/features.txt) - The file that lists all feature (column heads) that contain mean or std
   3. [subsetdata.csv](data/subsetdata.csv) - The subset of all_dataset.csv that only has the mean or std columns
-  4. [tidydata.txt](data/tidydata.txt) - The final tidy dataset that contains the averages of the mean or std columns by activity by subject
+  4. [tidydata.txt](data/tidydata.txt) - The fifth activity final tidy dataset that contains the averages of the mean or std columns by activity by subject
 
 
