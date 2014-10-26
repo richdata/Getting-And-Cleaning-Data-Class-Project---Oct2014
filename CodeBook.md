@@ -1,11 +1,26 @@
 ---
-title: "GettingAndCleaning-CourseProject"
+title: "Codebook"
 output: html_document
 ---
-Initial Housekeeping to set the working directory, create the data directory if it doesn't exist and get the file.
+ This code book describes the variables, the data, and any transformations or work that you performed to clean up the data.
+ 
+##First transformation
+The features, subject and activity datasets were given column headers when they were read in using the col.names parameter on the read command.
 
-setwd ("C:/Users/sodonri/Documents/My Personal Stuff/coursera/Getting and Cleaning Data/CourseProject")
-if(!file.exists("./data")){dir.create("./data")}
-fileUrl <- "https://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD"
-download.file(fileUrl,destfile="./data/restaurants.csv")
-restData <- read.csv("./data/restaurants.csv")
+##Second Transformation
+The raw data contained a numeric code to represent the activities for the observations.  To make this data in the observations more readable, the y_test, and y_train dataframes were converted from numeric to the equivalent text activity using the numeric code to subset the activity table.
+
+##Third Transformation
+Because the source files didn't have meaningful headers, by default, R creates generic V1, V2, ...Vn heading names.  To improve readability, the fields found in the festures.txt file were used as column headers when the test/train data files were read into the respective dataframes using thecol.names parameter and the features data frame.
+
+##Fourth Transformation
+The subject id and activity fields were added to the test and train data frames through the use of the column bind command.  Subject and Activity were added to the beginning of the file
+
+##Fifth Transformation
+The two data sets were combined into a single data frame using the rbind command.  This file was written to disk as an intermediary file.
+
+##Sixth Transformation
+The column headers of the combined data frame were used to create a single character vector of the 86 variables that contained any upper/lower case permutation of mean and std.  This character vector of the 86 variables was used along with 'Subject"and "Activity" to subset out only those fields that contained mean or std.  In addition, subject and activity were left in to allow grouping for the aggregate command later.
+
+##Seventh and Final Transformation
+The aggregate command was used to create the mean of the 86 variables from the above transformation grouped by subject and activity.  This final tidy dataset was saved to the hard drive as well.
