@@ -35,11 +35,11 @@ This will dowload the zip files, read the raw data and process it by following f
 - stripping out any column that have mean or std in the column hame and 
 - performing the mean funciton on those remaining columns usinng the aggregate command for a by subject by activity table.
 
-This final table is saved as it's owns tidy dataset called: [tidydata.txt](data/tidydata.txt). See the [CodeBook](CodeBook.md) for details on the variables and transformations applied.
+This final table is saved as it's owns tidy dataset called: [tidydata.txt](data/tidydata.txt). See the [CodeBook](CodeBook.md) for details on the variables, input datasets and transformations applied.
 
 **NOTE:** A quick inspection of the column names indicated mean was found as mean and Mean in the column heads.  Just to be safe, I used all combinations of upper and lower case to make up mean (e.g. MeAn) and std (e.g. sTd).  This is probably overkill, but what the heck.
 
-## Datasets
+## Output Datasets
 
 The [Data folder](data)  in this repository contains these 4 files:
   1. [all_dataset.csv](data/all_dataset.csv) - the combined dataset with both train and test data included in it.  It also contains the subject and activity columns added to it
