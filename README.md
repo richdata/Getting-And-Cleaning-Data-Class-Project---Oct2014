@@ -35,9 +35,9 @@ This will dowload the zip files, read the raw data and process it by following f
 ## Datasets
 
 The data folder in this repository contains these 4 files:
-1. all_dataset.csv - the combined dataset with both train and test data included in it.  It also contains the subject and activity columns added to it
-2. features.txt - The file that lists all feature (column heads) that contain mean or std
-3. subsetdata.csv - The subset of all_dataset.csv that only has the mean or std columns
-4. tidydata.txt - The final tidy dataset that contains the averages of the mean or std columns by activity by subject
+  1. all_dataset.csv - the combined dataset with both train and test data included in it.  It also contains the subject and activity columns added to it
+  2. features.txt - The file that lists all feature (column heads) that contain mean or std
+  3. subsetdata.csv - The subset of all_dataset.csv that only has the mean or std columns
+  4. tidydata.txt - The final tidy dataset that contains the averages of the mean or std columns by activity by subject
 
 
