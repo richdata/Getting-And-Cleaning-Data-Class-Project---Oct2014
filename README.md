@@ -28,7 +28,14 @@ A single R script called run_analysis.R that does the following.
 
 In addition to the above requrements, this script also downloads the zip file and unzips it into the individual files into it's own directory "UCI HAR Dataset" under the working directory.  To run this script, you should only have to open the R environment on this folder and type:  *source('./run_analysis.R')*
 
-This will dowload the zip files, read the raw data and process it by following following the instructions of the assignment. The code is fairly well (IMHO) documented and it follows a straightforward approach of reading all of the files, creating the train and test tables with appropriate column headings, row binding the two tables into a single dataset, stripping out any column that have mean or std in the column hame and performing the mean funciton on those remaining columns usinng the aggregate command for a by subject by activity table.  This final table is saved as it's owns tidy dataset.
+This will dowload the zip files, read the raw data and process it by following following the instructions of the assignment. The code is fairly well (IMHO) documented and it follows a straightforward approach of:
+- reading all of the files, 
+- creating the train and test tables with appropriate column headings, 
+- row binding the two tables into a single dataset, 
+- stripping out any column that have mean or std in the column hame and 
+- performing the mean funciton on those remaining columns usinng the aggregate command for a by subject by activity table.
+
+This final table is saved as it's owns tidy dataset called: [tidydata.txt](data/tidydata.txt). See the [CodeBook](CodeBook.md) for details on the variables and transformations applied.
 
 **NOTE:** A quick inspection of the column names indicated mean was found as mean and Mean in the column heads.  Just to be safe, I used all combinations of upper and lower case to make up mean (e.g. MeAn) and std (e.g. sTd).  This is probably overkill, but what the heck.
 
