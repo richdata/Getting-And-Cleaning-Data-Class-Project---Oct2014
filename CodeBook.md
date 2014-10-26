@@ -11,10 +11,10 @@ The features, subject and activity datasets were given column headers when they 
 The raw data contained a numeric code to represent the activities for the observations.  To make this data in the observations more readable, the y_test, and y_train dataframes were converted from numeric to the equivalent text activity using the numeric code to subset the activity table.
 
 ##Third Transformation
-Because the source files didn't have meaningful headers, by default, R creates generic V1, V2, ...Vn heading names.  To improve readability, the fields found in the festures.txt file were used as column headers when the test/train data files were read into the respective dataframes using thecol.names parameter and the features data frame.
+Because the source files didn't have meaningful headers, by default, R creates generic V1, V2, ...Vn heading names.  To improve readability, the 561 fields found in the festures.txt file were used as column headers when the test/train data files were read into the respective dataframes using thecol.names parameter and the features data frame.
 
 ##Fourth Transformation
-The subject id and activity fields were added to the test and train data frames through the use of the column bind command.  Subject and Activity were added to the beginning of the file
+The subject id and activity fields were added to the test and train data frames through the use of the column bind command.  Subject and Activity were added to the beginning of the file.  This new dataframe now has 563 variables, the 561 from the original data set and the 2 additional ones (subject, activity)
 
 ##Fifth Transformation
 The two data sets were combined into a single data frame using the rbind command.  This file was written to disk as an intermediary file.
