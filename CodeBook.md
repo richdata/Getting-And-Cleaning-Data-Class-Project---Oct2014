@@ -4,6 +4,19 @@ output: html_document
 ---
  This code book describes the variables, the data, and any transformations or work that you performed to clean up the data.
  
+ ##Variables & Input Datasets
+ The test/train datasets contained 561 variables as described here:
+ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+ The test/train data also had a Y dataset that described the activities associated with each observation found in the test/train X datasets.  These variables were numeric codes for the activities.
+ 
+ The activity_label.txt dataset contained the 6 text values that equated to the numeric activity coes in the Y datasets for test/train observations.
+ 
+ The features.txt dataset contained all 561 vaariables in text format for the data to be read in the test/train datasets
+ 
+ Finally, the subject_test and subject_train datasets found in the test/train directories, contained a code to identify which subject the equivalent record in the test/train datasets performed that observation.  For example, the 5th record in the x_test dataset belonged to the 5th record in the subject_test dataset.
+ 
+ Through the following tranformations, the datasets were combined and translated to add the subject identifier and a text equivalent of the activity code found in y_test/y_train datasets to improve readibility of the final tidy dataset.
+ 
 ##First transformation
 The features, subject and activity datasets were given column headers when they were read in using the col.names parameter on the read command.
 
