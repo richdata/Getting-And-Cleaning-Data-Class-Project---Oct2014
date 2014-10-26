@@ -4,7 +4,7 @@ output: html_document
 ---
  This code book describes the variables, the data, and any transformations or work that you performed to clean up the data.
  
- ##Variables & Input Datasets
+##Variables & Input Datasets
  The test/train datasets contained 561 variables as described here:
  http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
  The test/train data also had a Y dataset that described the activities associated with each observation found in the test/train X datasets.  These variables were numeric codes for the activities.
