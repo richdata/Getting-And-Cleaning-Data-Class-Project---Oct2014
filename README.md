@@ -33,3 +33,11 @@ This will dowload the zip files, read the raw data and process it by following f
 **NOTE:** A quick inspection of the column names indicated mean was found as mean and Mean in the column heads.  Just to be safe, I used all combinations of upper and lower case to make up mean (e.g. MeAn) and std (e.g. sTd).  This is probably overkill, but what the heck.
 
 ## Datasets
+
+The data folder in this repository contains these 4 files:
+1. all_dataset.csv - the combined dataset with both train and test data included in it.  It also contains the subject and activity columns added to it
+2. features.txt - The file that lists all feature (column heads) that contain mean or std
+3. subsetdata.csv - The subset of all_dataset.csv that only has the mean or std columns
+4. tidydata.txt - The final tidy dataset that contains the averages of the mean or std columns by activity by subject
+
+
